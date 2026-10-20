@@ -1,0 +1,40 @@
+{
+	"name": "femiwiki/webfinger",
+	"description": "Parse WebFinger acct: resources and build their answers",
+	"keywords": ["activitypub", "webfinger", "fediverse"],
+	"homepage": "https://github.com/femiwiki/webfinger",
+	"license": "Apache-2.0",
+	"authors": [
+		{
+			"name": "Femiwiki Team"
+		}
+	],
+	"require": {
+		"php": ">=8.2"
+	},
+	"require-dev": {
+		"carthage-software/mago": "1.58.2",
+		"phpro/grumphp": "2.26.0",
+		"phpunit/phpunit": "11.5.57"
+	},
+	"autoload": {
+		"psr-4": {
+			"Femiwiki\\WebFinger\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Femiwiki\\WebFinger\\Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"fix": "mago fmt",
+		"test": "grumphp run --no-interaction"
+	},
+	"config": {
+		"allow-plugins": {
+			"phpro/grumphp": true
+		},
+		"sort-packages": true
+	}
+}
